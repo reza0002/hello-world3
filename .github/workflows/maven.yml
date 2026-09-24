@@ -26,6 +26,14 @@ jobs:
     - run: bash container.sh
     - name: Build image
       run: docker build -t minside .
+    - name: Start container
+      run: docker run -d --name minside -p 8080:8000 minside
+    - name: Hent siden
+      run: |
+        sleep 2
+        curl http://localhost:8080
+    - name: Fjern container
+      run: docker rm -f minside
       
 
 
