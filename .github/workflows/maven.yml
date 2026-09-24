@@ -34,6 +34,14 @@ jobs:
         curl http://localhost:8080
     - name: Fjern container
       run: docker rm -f minside
+    - name: Start container på 9090
+      run: docker run -d --name minside2 -p 9090:8000 minside
+    - name: Hent siden på 9090
+      run: |
+        sleep 2
+        curl http://localhost:9090
+    - name: Fjern container på 9090
+      run: docker rm -f minside2
       
 
 
