@@ -6,4 +6,4 @@ docker exec web ls /usr/share/nginx/html
 docker logs web
 
 
-docker run -d --name web2 -p 8080:80 nginx
+docker run -d --name web2 nginx
