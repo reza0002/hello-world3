@@ -21,7 +21,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - run: docker run HelloWorld3
+    - run: docker run hello-world3
     - run: bash container.sh
     - name: Set up JDK 25
       uses: actions/setup-java@v4
